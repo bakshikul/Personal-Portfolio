@@ -526,7 +526,6 @@ html {
     width: 100%;
     overflow-x: hidden;
   }
-
   /* NAVBAR */
 
   .navbar{
@@ -563,7 +562,7 @@ html {
 
   .links button{
     width: 85px;
-    height: 45px;
+    height: auto;
     font-size: 1rem;
   }
   /* HERO SECTION */
@@ -577,7 +576,7 @@ html {
 
   .hero1{
     width: 100%;
-    height:480px;
+    height:auto;
     padding: 0;
     text-align: center;
   }
@@ -632,8 +631,8 @@ html {
     margin:5px 0;
   }
   .about2{
-    height:370px;
-    width:300px;
+    height: auto;
+    width: 300px;
     align-items: center;
   }
   .type{
@@ -669,7 +668,7 @@ html {
   /* EDUCATION */
 
   .education{
-    height: 600px;
+    height: auto;
     padding: 15px;
   }
   .label {
@@ -707,8 +706,7 @@ html {
   }
 
   .content2 h4{
-    font-size: 1
-    rem;
+    font-size: 1rem;
   }
 
   /* SKILLS */
@@ -747,48 +745,87 @@ html {
     font-weight: 200;
   }
   /* PROJECTS */
+  
+.Projects {
+  height: 700px;
+  width: 100%;
+  border-bottom: 1px solid gray;
+}
+.project-list{
+  padding:30px;
+  display: flex;
+  gap:30px;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  flex-shrink: none;
+  scrollbar-width: none;
+  margin-left:10px;
 
-  .Projects{
-    height: auto;
-    padding: 20px 10px;
-  }
-
-  .list{
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    gap: 20px;
-    overflow: hidden;
-  }
-
-  .pro1{
-    width: 100%;
-    height: auto;
-    padding: 20px;
-  }
-
-  .pro1 img{
-    display: none;
-  }
-
-  .pro-title1{
-    height: auto;
-  }
-
-  .pro-title2{
-    height: auto;
-    margin: 10px 0;
-  }
-
-  .pro1 p{
-    font-size: 0.95rem;
-  }
-
-  .pro1 button{
-    width: 90px;
-    height: 40px;
-    font-size: 0.9rem;
-  }
+}
+.project1{
+  display: flex;
+  flex-direction: column;
+  width:400px;
+  height:500px;
+  flex-shrink: 0;
+  border:2px solid black;
+  border-radius: 20px;
+}
+.pro1{
+  width:100%;
+  height:70%;
+  object-fit: cover;
+}
+.pro1 img{
+  height:100%;
+  width:100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.pr {
+  display: flex;
+  margin: 10px 0px 10px 15px;
+}
+.pr h2{
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.pr i{
+  display: none;
+}
+.info1{
+  color:gray;
+  font-size: 1.2rem;;
+  margin:0px 0px 10px 20px;
+}
+.ls{
+  display: flex;
+  gap:20px;
+  margin:0px 0px 0px 20px;
+  font-size: 1.1rem;
+  color:#f96167;
+}
+.ls1 , .ls2 {
+  color:#f96167;
+  border:2px solid #f96167;
+  height:30px;
+  border-radius:20px;
+  padding:3.5px;
+  font-weight:100;
+  text-align: center;
+  width:77px;
+}
+.ls3{
+  color:#f96167;
+  border:2px solid #f96167;
+  height:30px;
+  border-radius:20px;
+  padding:3.5px;
+  font-weight:100;
+  text-align: center;
+  width:92px;
+}
 
   /* CONTACT */
 
@@ -840,6 +877,7 @@ html {
     margin-left: 0;
     margin-top: 20px;
     display: flex;
+    justify-content: space-between;
   }
   .high2 h1{
     font-size: 2.5rem;
