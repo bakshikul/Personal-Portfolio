@@ -540,13 +540,13 @@ html {
   }
 
   .navbar img{
-    display: none;
+    height: 50px;
+    margin: 0;
+    padding: 0;
   }
 
   .navbar h2{
-    font-size: 2rem;
-    font-weight: 300;
-    text-decoration: underline;
+    display: none;
   }
 
   .links{
