@@ -58,7 +58,6 @@ html {
   width: 100%;
   gap: 100px;
   margin-top: 70px;
-  border-bottom: 1px solid gray;
 }
 .hero1 {
   height: 100%;
@@ -107,8 +106,9 @@ html {
   text-align: center;
 }
 .type h1 {
-  font-size: 3rem;
-  font-weight: 200;
+  font-size: 5rem;
+  font-weight: 600;
+  color:#f38488;
   margin: 10px 0px 0px 0px;
 }
 .container1 {
@@ -116,10 +116,10 @@ html {
   height: 100%;
   width: 100%;
   gap: 100px;
-  border-bottom: 1px solid gray;
+  border-bottom: none;
 }
 .about {
-  border-bottom: 1px solid gray;
+  border-bottom: none;
 }
 .about1 {
   height: 50%;
@@ -129,7 +129,7 @@ html {
 .abt1 {
   font-size: 4rem;
   color: #f96167;
-  font-weight: 600;
+  font-weight: 300;
   margin: 50px 0px 0px 40px;
 }
 .abt2 {
@@ -166,7 +166,6 @@ html {
 .skills {
   height: 710px;
   width: 100%;
-  border: 1px solid gray;
 }
 .skill {
   display: flex;
@@ -174,8 +173,9 @@ html {
   align-items: center;
 }
 .skill h1 {
-  font-size: 3rem;
-  font-weight: 200;
+  font-size: 5rem;
+  font-weight: 600;
+  color:#f38488;
   margin: 10px 0px 30px 0px;
 }
 .skill-list1 h1 {
@@ -199,9 +199,8 @@ html {
   font-size: 1.5rem;
 }
 .Projects {
-  height: 700px;
+  height: 770px;
   width: 100%;
-  border-bottom: 1px solid gray;
 }
 .project-list{
   padding:30px;
@@ -289,10 +288,9 @@ html {
   text-align: center;
 }
 .label h1 {
-  font-weight: 200;
-  font-size: 3rem;
-  font-size: 3rem;
-  font-weight: 200;
+  font-weight: 600;
+  color:#f38488;
+  font-size: 5rem;
   margin: 10px 0px 0px 0px;
 }
 .pro3{
@@ -368,12 +366,16 @@ html {
   display: flex;
   height: 700px;
   width: 100%;
-  border-bottom: 1px solid gray;
 }
 .high {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.high h1{
+  font-size: 5rem;
+  font-weight: 600;
+  color:#f38488;
 }
 .contact1 {
   height: 90%;
@@ -570,10 +572,11 @@ html {
   .hero{
     flex-direction: column;
     gap: 20px;
+    border-bottom: none;
     margin-top: 20px;
     padding: 15px;
   }
-
+  
   .hero1{
     width: 100%;
     height:auto;
@@ -609,14 +612,19 @@ html {
 
   /* ABOUT */
 
+  .about{
+    border-bottom: none;
+  }
   .container1{
     flex-direction: column;
     gap: 20px;
+    border:none;
     padding: 15px;
   }
   .about1{
     width: 100%;
     padding: 0;
+    display: none;
     text-align: center;
   }
 
@@ -639,9 +647,9 @@ html {
     text-align: left;
   }
   .type h1{
-    font-size: 2rem;
-    font-weight: 200;
-    text-decoration: underline;
+    font-size: 3rem;
+    font-weight: 800;
+    color:#f8a1a4;
     margin:10px 0px 20px 20px;
   }
   .about2 img{
@@ -651,6 +659,7 @@ html {
   } 
   .container2{
     padding: 15px;
+    border-top:none;
   }
 
   .container2 p{
@@ -671,14 +680,15 @@ html {
     height: auto;
     padding: 15px;
   }
-  .label {
+  .label{
     text-align: left;
   }
   .label h1{
-    font-size:2rem;
-    font-weight:200;
-     margin:10px 0px 20px 10px;
-    text-decoration: underline;
+    font-size: 3rem;
+    font-weight: 800;
+    color:#f8a1a4;
+    margin:10px 10px 50px 20px;
+    
   }
 
   .content{
@@ -713,14 +723,15 @@ html {
 
   .skills{
     height: auto;
+    border:none;
     padding: 20px 15px;
   }
 
   .skill h1{
-    font-size: 2rem;
-    font-weight: 200;
-    text-decoration: underline;
-    margin:10px 200px 20px 20px;
+     font-size: 3rem;
+    font-weight: 800;
+    color:#f8a1a4;
+    margin:10px 165px 20px 20px;
   }
 
   .skill-list1,
@@ -747,14 +758,15 @@ html {
   /* PROJECTS */
   
 .Projects {
-  height: 700px;
+  height: auto;
   width: 100%;
-  border-bottom: 1px solid gray;
+  border-bottom: none;
 }
 .project-list{
   padding:30px;
   display: flex;
   gap:30px;
+  align-items: left;
   flex-wrap: nowrap;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -766,7 +778,7 @@ html {
 .project1{
   display: flex;
   flex-direction: column;
-  width:400px;
+  width:350px;
   height:500px;
   flex-shrink: 0;
   border:2px solid black;
@@ -833,6 +845,7 @@ html {
     flex-direction: column;
     height: auto;
     padding: 15px;
+    border:none;
   }
 
   .contact1{
@@ -846,7 +859,10 @@ html {
     text-align: left;
   }
   .high h1{
-    margin:0px 120px 0px 0px;
+     font-size: 3rem;
+    font-weight: 800;
+    color:#f8a1a4;
+    margin:10px 165px 20px 20px;
   }
   .contact2 h1{
     font-size: 2rem;
@@ -891,7 +907,13 @@ html {
     flex-direction: column;
     gap:20px;
   }
-
+  .high h1{
+     font-size: 3rem;
+    font-weight: 800;
+    color:#f8a1a4;
+    text-decoration: none;
+    margin:10px 120px 20px 20px;
+  }
   /* FOOTER */
 
   .end{
@@ -920,8 +942,7 @@ html {
   }
 
   .l2 h3{
-    font-size: 1.5rem;
-    padding: 10px;
+    font-size: 1.3rem;
   }
 
   /* REMOVE ALL EXTRA IMAGES */
