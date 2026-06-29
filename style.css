@@ -894,14 +894,11 @@ html {
   .contact2{
     width: 100%;
   }
-  .high {
-    text-align: left;
-  }
   .high h1{
     font-size: 3rem;
     font-weight: 800;
     color:#f8a1a4;
-    margin:10px 80px 20px 20px;
+    margin:10px 50px 20px 20px;
   }
   .contact2 h1{
     font-size: 2rem;
