@@ -770,7 +770,7 @@ html {
      font-size: 3rem;
     font-weight: 800;
     color:#f8a1a4;
-    margin:10px 0px 20px 20px;
+    margin:10px 100px 20px 20px;
   }
 
   .skill-list1,
@@ -898,10 +898,10 @@ html {
     text-align: left;
   }
   .high h1{
-     font-size: 3rem;
+    font-size: 3rem;
     font-weight: 800;
     color:#f8a1a4;
-    margin:10px 0px 20px 20px;
+    margin:10px 100px 20px 20px;
   }
   .contact2 h1{
     font-size: 2rem;
