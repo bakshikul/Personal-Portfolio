@@ -19,7 +19,9 @@ html {
   color: royalblue;
 }
 .navbar img {
-  height: 60px;
+  height: 50px;
+
+  padding:30px;
   margin: 0px 0px 0px 10px;
 }
 .navbar {
@@ -96,10 +98,10 @@ html {
   font-size: 1rem;
 }
 .hero2 img {
-  height: 420px;
-  width: 420px;
-  border-radius: 50%;
-  padding: 90px;
+  height: 600px;
+  width: 600px;
+  border-radius: 20%;
+  padding: 20px;
   object-fit: cover;
 }
 .type {
@@ -115,40 +117,71 @@ html {
   display: flex;
   height: 100%;
   width: 100%;
-  gap: 100px;
-  border-bottom: none;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0px;
 }
+
 .about {
   border-bottom: none;
+  padding: 30px 0;
 }
-.about1 {
-  height: 50%;
-  width: 50%;
-  padding: 85px;
-}
-.abt1 {
-  font-size: 4rem;
-  color: #f96167;
-  font-weight: 300;
-  margin: 50px 0px 0px 40px;
-}
-.abt2 {
-  font-size: 2.8rem;
-  color: black;
-  font-weight: 100;
-  margin: 100px 0px 0px 40px;
-}
+
 .about2 {
   height: 50%;
   width: 50%;
-  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .about2 img {
-  height: 470px;
-  width: 400px;
-  border-radius: 40px;
+  height: 420px;
+  width: 380px;
+  border-radius: 30px;
   object-fit: cover;
-  margin: 0px 0px 0px 100px;
+  margin: 0;
+  transition: 0.4s ease;
+  box-shadow: 0 10px 35px rgba(0,0,0,.15);
+}
+
+.about2 img:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 45px rgba(249,97,103,.35);
+}
+
+.container2 {
+  width: 70%;
+  background: #fff;
+}
+
+
+.container2 p {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  font-family: inherit;
+  color: #555;
+}
+
+.info {
+  display: flex;
+  gap: 25px;
+  margin : 20px 180px 0px 0px;
+}
+
+.info h4 {
+  padding: 12px 18px;
+  border: 2px solid #f96167;
+  border-radius: 30px;
+  color: #f96167;
+  font-weight: 500;
+  transition: .3s;
+}
+
+.info h4:hover {
+  background: #f96167;
+  color: white;
 }
 .border2 {
   border: 2px solid transparent;
@@ -158,13 +191,16 @@ html {
   scale: 102%;
   box-shadow: 4px 2px 10px #000;
 }
-.container2 p {
-  font-size: 1.1rem;
-  padding: 14px 15px 10px 5px;
+.container1{
+  display: flex;
+}
+.container2 pre {
+  font-size: 1.5rem;
+  /* padding: 14px 15px 10px 5px; */
   text-align: left;
 }
 .skills {
-  height: 710px;
+  height: 770px;
   width: 100%;
 }
 .skill {
@@ -403,7 +439,7 @@ html {
 }
 .contact {
   display: flex;
-  height: 700px;
+  height: 600px;
   width: 100%;
 }
 .high {
