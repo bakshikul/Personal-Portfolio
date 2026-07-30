@@ -40,7 +40,7 @@ cd Personal-Portfolio
 ```
 ## 🌍 Live Website
 
-🔗 **Portfolio:** [YOUR_PORTFOLIO_URL]
+🔗 **Portfolio:** https://kulbakshipersonalportfolio.netlify.app/
 
 ## 📌 Featured Projects
 
@@ -62,7 +62,7 @@ Key Concepts: Regression, Data Preprocessing, Feature Encoding, Exploratory Data
 
 If you'd like to connect, collaborate, or discuss a project, feel free to reach out.
 
-* **Portfolio :** [YOUR_PORTFOLIO_URL]
+* **Portfolio :** https://kulbakshipersonalportfolio.netlify.app/
 * **GitHub :** https://github.com/bakshikul
 * **LinkedIn :** https://www.linkedin.com/in/kul-bakshi-881659326/
 * **Email :** kulbakshi01@gmail.com
