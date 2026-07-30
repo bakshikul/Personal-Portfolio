@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Message Sent | Kul Bakshi</title>
+
+  <style>
+    /* =========================
+       Global Styles
+    ========================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 20px;
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      background: #ffffff;
+      color: #222222;
+    }
+
+
+    /* =========================
+       Success Container
+    ========================= */
+
+    .success-container {
+      width: 100%;
+      max-width: 550px;
+
+      padding: 50px 40px;
+
+      text-align: center;
+
+      background: #ffffff;
+
+      border: 1px solid #eeeeee;
+      border-radius: 20px;
+
+      box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.08);
+    }
+
+
+    /* =========================
+       Success Icon
+    ========================= */
+
+    .success-icon {
+      width: 75px;
+      height: 75px;
+
+      margin: 0 auto 25px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: #ffffff;
+
+      background: #f96167;
+
+      border-radius: 50%;
+
+      font-size: 2rem;
+      font-weight: bold;
+
+      box-shadow:
+        0 10px 25px rgba(249, 97, 103, 0.25);
+    }
+
+
+    /* =========================
+       Heading
+    ========================= */
+
+    .success-container h1 {
+      margin-bottom: 15px;
+
+      font-size: 2rem;
+      font-weight: 700;
+
+      color: #222222;
+    }
+
+
+    /* =========================
+       Message
+    ========================= */
+
+    .success-container p {
+      max-width: 420px;
+
+      margin: 0 auto 30px;
+
+      color: #666666;
+
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+
+    /* =========================
+       Back Button
+    ========================= */
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 12px 25px;
+
+      color: #ffffff;
+      background: #f96167;
+
+      border-radius: 8px;
+
+      font-size: 0.95rem;
+      font-weight: 600;
+
+      text-decoration: none;
+
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background: #e84f56;
+
+      transform: translateY(-2px);
+
+      box-shadow:
+        0 8px 20px rgba(249, 97, 103, 0.25);
+    }
+
+
+    /* =========================
+       Responsive Design
+    ========================= */
+
+    @media (max-width: 500px) {
+
+      .success-container {
+        padding: 40px 25px;
+      }
+
+      .success-container h1 {
+        font-size: 1.6rem;
+      }
+
+      .success-container p {
+        font-size: 0.9rem;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <main class="success-container">
+
+    <div class="success-icon">
+      ✓
+    </div>
+
+    <h1>Message Sent Successfully!</h1>
+
+    <p>
+      Thank you for reaching out. Your message has been received.
+      I'll get back to you as soon as possible.
+    </p>
+
+    <a href="index.html" class="back-btn">
+      Back to Portfolio
+    </a>
+
+  </main>
+
+</body>
+
+</html>
