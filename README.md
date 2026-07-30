@@ -46,9 +46,17 @@ cd Personal-Portfolio
 
 Some of the projects showcased on the portfolio include:
 
-* **Project 1** — Short description of the project.
-* **Project 2** — Short description of the project.
-* **Project 3** — Short description of the project.
+* **🫀 Heart Disease Prediction Model** — A machine learning classification model designed to predict the likelihood of heart disease based on patient health and clinical attributes. The project involves data preprocessing, exploratory data analysis, feature selection, model training, and performance evaluation. It demonstrates how machine learning can be applied to healthcare-related datasets to identify patterns associated with heart disease risk.
+
+Key Concepts: Classification, Data Preprocessing, Exploratory Data Analysis, Feature Engineering, Model Evaluation
+
+* **🛍️ Mall Customers Segmentation Model** — A customer segmentation project that uses unsupervised machine learning to group mall customers based on characteristics such as age, annual income, and spending behavior. The model identifies distinct customer segments, helping analyze purchasing patterns and understand different customer groups.
+
+Key Concepts: Unsupervised Learning, K-Means Clustering, Customer Segmentation, Exploratory Data Analysis, Data Visualization
+
+* **🏥 Insurance Charges Prediction Model** — A machine learning regression model developed to predict medical insurance charges based on personal and demographic factors such as age, BMI, number of children, smoking status, and region. The project includes data preprocessing, categorical feature encoding, exploratory analysis, model training, and evaluation to understand the factors influencing insurance costs.
+
+Key Concepts: Regression, Data Preprocessing, Feature Encoding, Exploratory Data Analysis, Model Evaluation
 
 Each project includes information about its purpose, technologies used, and relevant source-code/demo links.
 
@@ -57,7 +65,7 @@ Each project includes information about its purpose, technologies used, and rele
 If you'd like to connect, collaborate, or discuss a project, feel free to reach out.
 
 * **Portfolio :** [YOUR_PORTFOLIO_URL]
-* **GitHub :** [YOUR_GITHUB_URL]
+* **GitHub :** https://github.com/bakshikul
 * **LinkedIn :** [YOUR_LINKEDIN_URL]
 * **Email :** kulbakshi01@gmail.com
 
