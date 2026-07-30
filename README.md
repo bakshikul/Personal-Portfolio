@@ -58,15 +58,13 @@ Key Concepts: Unsupervised Learning, K-Means Clustering, Customer Segmentation, 
 
 Key Concepts: Regression, Data Preprocessing, Feature Encoding, Exploratory Data Analysis, Model Evaluation
 
-Each project includes information about its purpose, technologies used, and relevant source-code/demo links.
-
 ## 📬 Contact
 
 If you'd like to connect, collaborate, or discuss a project, feel free to reach out.
 
 * **Portfolio :** [YOUR_PORTFOLIO_URL]
 * **GitHub :** https://github.com/bakshikul
-* **LinkedIn :** [YOUR_LINKEDIN_URL]
+* **LinkedIn :** https://www.linkedin.com/in/kul-bakshi-881659326/
 * **Email :** kulbakshi01@gmail.com
 
 ## 🤝 Contributing
