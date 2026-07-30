@@ -23,73 +23,21 @@ The website is designed to provide a clean and interactive way to learn more abo
 The website is built using:
 
 * **Frontend:** `HTML / CSS / JavaScript`
-* **Framework:** `React / Next.js` *(if applicable)*
-* **Styling:** `CSS / Tailwind CSS` *(if applicable)*
-* **Deployment:** `Vercel / Netlify / GitHub Pages` *(if applicable)*
-
-> Update the technologies above according to the actual implementation.
-
-## 📂 Project Structure
-
-```text
-portfolio/
-│
-├── public/              # Static assets
-├── src/                 # Source code
-│   ├── components/      # Reusable UI components
-│   ├── pages/           # Website pages
-│   ├── assets/          # Images, icons, and other assets
-│   └── styles/          # Styling files
-│
-├── package.json         # Project dependencies and scripts
-├── README.md            # Project documentation
-└── ...
-```
-
-> The structure may differ depending on the framework and project setup.
-
+* **Styling:** `CSS / Tailwind CSS`
+* **Deployment:** `Netlify` 
 ## 🚀 Getting Started
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+https://github.com/bakshikul/Personal-Portfolio.git
 ```
 
 ### 2. Navigate to the project directory
 
 ```bash
-cd YOUR_REPOSITORY
+cd Personal-Portfolio
 ```
-
-### 3. Install dependencies
-
-If the project uses Node.js:
-
-```bash
-npm install
-```
-
-### 4. Start the development server
-
-```bash
-npm run dev
-```
-
-The website should now be available at:
-
-```text
-http://localhost:3000
-```
-
-## 📸 Preview
-
-Add screenshots or a GIF of your portfolio here.
-
-```text
-![Portfolio Preview](./screenshots/portfolio-preview.png)
-```
-
 ## 🌍 Live Website
 
 🔗 **Portfolio:** [YOUR_PORTFOLIO_URL]
@@ -111,7 +59,7 @@ If you'd like to connect, collaborate, or discuss a project, feel free to reach 
 * **Portfolio:** [YOUR_PORTFOLIO_URL]
 * **GitHub:** [YOUR_GITHUB_URL]
 * **LinkedIn:** [YOUR_LINKEDIN_URL]
-* **Email:** [YOUR_EMAIL]
+* **Email:** kulbakshi01@gmail.com
 
 ## 🤝 Contributing
 
@@ -132,13 +80,6 @@ git push origin feature/improvement
 ```
 
 Then open a Pull Request.
-
-## 📄 License
-
-This project is available under the **MIT License**.
-
-See the `LICENSE` file for more information.
-
 ---
 
 ⭐ If you find this project useful or interesting, consider giving the repository a star!
