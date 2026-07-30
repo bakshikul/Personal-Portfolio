@@ -22,9 +22,9 @@ The website is designed to provide a clean and interactive way to learn more abo
 
 The website is built using:
 
-* **Frontend:** `HTML / CSS / JavaScript`
-* **Styling:** `CSS / Tailwind CSS`
-* **Deployment:** `Netlify` 
+* **Frontend :** `HTML / CSS / JavaScript`
+* **Styling :** `CSS / Tailwind CSS`
+* **Deployment :** `Netlify` 
 ## 🚀 Getting Started
 
 ### 1. Clone the repository
@@ -56,31 +56,14 @@ Each project includes information about its purpose, technologies used, and rele
 
 If you'd like to connect, collaborate, or discuss a project, feel free to reach out.
 
-* **Portfolio:** [YOUR_PORTFOLIO_URL]
-* **GitHub:** [YOUR_GITHUB_URL]
-* **LinkedIn:** [YOUR_LINKEDIN_URL]
-* **Email:** kulbakshi01@gmail.com
+* **Portfolio :** [YOUR_PORTFOLIO_URL]
+* **GitHub :** [YOUR_GITHUB_URL]
+* **LinkedIn :** [YOUR_LINKEDIN_URL]
+* **Email :** kulbakshi01@gmail.com
 
 ## 🤝 Contributing
 
 This repository primarily contains my personal portfolio website. Suggestions, improvements, and constructive feedback are welcome.
-
-If you'd like to contribute:
-
-```bash
-# Fork the repository
-# Create a new branch
-git checkout -b feature/improvement
-
-# Make your changes and commit
-git commit -m "Add improvement"
-
-# Push the branch
-git push origin feature/improvement
-```
-
-Then open a Pull Request.
----
 
 ⭐ If you find this project useful or interesting, consider giving the repository a star!
 
