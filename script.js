@@ -1,7 +1,7 @@
 const typingText = document.getElementById("typing-text");
 
 const roles = [
-    "Artificaial Intelligence Student",
+    "Artificial Intelligence Student",
     "Machine Learning Student",
     "Web Developer"
 ];
