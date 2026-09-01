@@ -1682,6 +1682,7 @@ body {
   .footer-container strong {
     color: #f96167;
   }
+  
   @media screen and (max-width: 360px) {
 
     .nav {
