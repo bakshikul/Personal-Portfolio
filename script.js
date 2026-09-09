@@ -1,166 +1,198 @@
-const typingText = document.getElementById("typing-text");
+document.addEventListener('DOMContentLoaded', () => {
+  initTypingEffect();
+  initNetworkCanvas();
+  initActiveNav();
+  initScrollReveal();
+  initContactForm();
+  initCardSpotlight();
+});
 
-const roles = [
-    "Artificial Intelligence Student",
-    "Machine Learning Student",
-    "Web Developer"
-];
-
-let roleIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-
-function typeEffect() {
-    const currentRole = roles[roleIndex];
-
-    if (!isDeleting) {
-        // Type the text
-        typingText.textContent = currentRole.substring(0, charIndex + 1);
-        charIndex++;
-
-        // Start deleting after the word is completely typed
-        if (charIndex === currentRole.length) {
-            isDeleting = true;
-            setTimeout(typeEffect, 1500);
-            return;
-        }
+function initTypingEffect() {
+  const el = document.getElementById('typing-text');
+  if (!el) return;
+  const roles = ['an AI/ML Engineer', 'a Machine Learning Enthusiast', 'a Web Developer', 'a Problem Solver'];
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) {
+    el.textContent = roles[0];
+    return;
+  }
+  let roleIndex = 0;
+  let charIndex = 0;
+  let deleting = false;
+  const TYPE_SPEED = 65;
+  const DELETE_SPEED = 35;
+  const HOLD_TIME = 1400;
+  const GAP_TIME = 400;
+  function tick() {
+    const current = roles[roleIndex];
+    if (!deleting) {
+      charIndex++;
+      el.textContent = current.slice(0, charIndex);
+      if (charIndex === current.length) {
+        deleting = true;
+        setTimeout(tick, HOLD_TIME);
+        return;
+      }
+      setTimeout(tick, TYPE_SPEED);
     } else {
-        // Delete the text
-        typingText.textContent = currentRole.substring(0, charIndex - 1);
-        charIndex--;
-
-        // Move to the next role
-        if (charIndex === 0) {
-            isDeleting = false;
-            roleIndex = (roleIndex + 1) % roles.length;
-        }
+      charIndex--;
+      el.textContent = current.slice(0, charIndex);
+      if (charIndex === 0) {
+        deleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        setTimeout(tick, GAP_TIME);
+        return;
+      }
+      setTimeout(tick, DELETE_SPEED);
     }
-
-    setTimeout(typeEffect, isDeleting ? 70 : 120);
+  }
+  tick();
 }
 
-typeEffect();
-
-document.addEventListener("DOMContentLoaded", () => {
-  const skillCards = document.querySelectorAll(
-    ".skill1, .skill2, .skill3, .skill4"
-  );
-
-  const skillItems = document.querySelectorAll(".skill-list li");
-
-  // Initial card animation
-  skillCards.forEach((card, index) => {
-    card.style.opacity = "0";
-    card.style.transform = "translateY(30px)";
-
-    setTimeout(() => {
-      card.style.transition =
-        "opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease";
-      card.style.opacity = "1";
-      card.style.transform = "translateY(0)";
-    }, index * 150);
-  });
-
-  // Skill item click effect
-  skillItems.forEach((item) => {
-    item.addEventListener("click", () => {
-      skillItems.forEach((skill) => {
-        skill.classList.remove("active-skill");
-      });
-
-      item.classList.add("active-skill");
+function initNetworkCanvas() {
+  const hero = document.querySelector('.hero');
+  if (!hero) return;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) return;
+  const canvas = document.createElement('canvas');
+  canvas.id = 'network-canvas';
+  hero.prepend(canvas);
+  const ctx = canvas.getContext('2d');
+  let width, height, nodes;
+  const NODE_COUNT = 50;
+  const LINK_DIST = 130;
+  const VIOLET = '124, 92, 252';
+  const CYAN = '34, 211, 197';
+  function resize() {
+    width = canvas.width = hero.clientWidth;
+    height = canvas.height = hero.clientHeight;
+  }
+  function makeNodes() {
+    nodes = Array.from({ length: NODE_COUNT }, () => ({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      vx: (Math.random() - 0.5) * 0.25,
+      vy: (Math.random() - 0.5) * 0.25,
+      r: Math.random() * 1.7 + 1,
+      cyan: Math.random() < 0.35
+    }));
+  }
+  function step() {
+    ctx.clearRect(0, 0, width, height);
+    nodes.forEach(n => {
+      n.x += n.vx;
+      n.y += n.vy;
+      if (n.x < 0 || n.x > width) n.vx *= -1;
+      if (n.y < 0 || n.y > height) n.vy *= -1;
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${n.cyan ? CYAN : VIOLET}, 0.6)`;
+      ctx.fill();
     });
-  });
-
-  // Mouse movement effect on skill cards
-  skillCards.forEach((card) => {
-    card.addEventListener("mousemove", (e) => {
-      const rect = card.getBoundingClientRect();
-
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-
-      const rotateX = (y - centerY) / 25;
-      const rotateY = (centerX - x) / 25;
-
-      card.style.transform =
-        `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
-    });
-
-    card.addEventListener("mouseleave", () => {
-      card.style.transform =
-        "perspective(800px) rotateX(0) rotateY(0) translateY(0)";
-    });
-  });
-});
-document.addEventListener("DOMContentLoaded", () => {
-  const experienceCards = document.querySelectorAll(".experience1");
-  const skillItems = document.querySelectorAll(".exp-skill1 li");
-  const certificateButtons = document.querySelectorAll(".experience1 button");
-
-  // Animate experience cards when they enter the viewport
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-          observer.unobserve(entry.target);
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const a = nodes[i], b = nodes[j];
+        const dx = a.x - b.x, dy = a.y - b.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < LINK_DIST) {
+          const opacity = (1 - dist / LINK_DIST) * 0.2;
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(b.x, b.y);
+          ctx.strokeStyle = `rgba(${VIOLET}, ${opacity})`;
+          ctx.lineWidth = 1;
+          ctx.stroke();
         }
-      });
-    },
-    {
-      threshold: 0.15
-    }
-  );
-
-  experienceCards.forEach((card, index) => {
-    card.style.opacity = "0";
-    card.style.transform = "translateY(40px)";
-    card.style.transition =
-      `opacity 0.7s ease ${index * 0.15}s, 
-       transform 0.7s ease ${index * 0.15}s,
-       box-shadow 0.3s ease,
-       border-color 0.3s ease`;
-
-    observer.observe(card);
-  });
-
-  // Add active class to the card when animation starts
-  experienceCards.forEach((card) => {
-    const checkVisibility = () => {
-      const rect = card.getBoundingClientRect();
-
-      if (
-        rect.top < window.innerHeight * 0.85 &&
-        rect.bottom > 0
-      ) {
-        card.style.opacity = "1";
-        card.style.transform = "translateY(0)";
       }
-    };
-
-    window.addEventListener("scroll", checkVisibility);
-    checkVisibility();
+    }
+    requestAnimationFrame(step);
+  }
+  resize();
+  makeNodes();
+  step();
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      resize();
+      makeNodes();
+    }, 200);
   });
+}
 
-  // Skill tag click interaction
-  skillItems.forEach((skill) => {
-    skill.addEventListener("click", () => {
-      skill.classList.toggle("active-skill");
+function initActiveNav() {
+  const links = document.querySelectorAll('.nav-links a');
+  if (!links.length) return;
+  const sections = Array.from(links).map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+  if (!sections.length) return;
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = `#${entry.target.id}`;
+        links.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === id);
+        });
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+  sections.forEach(section => observer.observe(section));
+}
+
+function initScrollReveal() {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const targets = document.querySelectorAll('.about-conta, .skill-list > div, .experience1, .project1, .contact-container');
+  if (!targets.length) return;
+  if (prefersReducedMotion) {
+    targets.forEach(t => t.classList.add('reveal', 'is-visible'));
+    return;
+  }
+  targets.forEach(t => t.classList.add('reveal'));
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  targets.forEach(t => observer.observe(t));
+}
+
+function initContactForm() {
+  const form = document.querySelector('.contact1 form');
+  if (!form) return;
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    const data = Object.fromEntries(new FormData(form).entries());
+    console.log('Contact form submitted:', data);
+    let status = form.querySelector('.form-status');
+    if (!status) {
+      status = document.createElement('p');
+      status.className = 'form-status';
+      form.appendChild(status);
+    }
+    status.textContent = `Thanks, ${data.name.split(' ')[0]} — your message is on its way. I'll get back to you soon.`;
+    form.reset();
+  });
+}
+
+function initCardSpotlight() {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) return;
+  const cards = document.querySelectorAll('.skill-list > div, .experience1, .project1');
+  cards.forEach(card => {
+    card.style.setProperty('--spot-x', '50%');
+    card.style.setProperty('--spot-y', '50%');
+    card.addEventListener('pointermove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      card.style.setProperty('--spot-x', `${x}%`);
+      card.style.setProperty('--spot-y', `${y}%`);
     });
   });
-
-  // Certificate button interaction
-  certificateButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      button.textContent = "Certificate Opened ✓";
-
-      setTimeout(() => {
-        button.textContent = "Certificate";
-      }, 2000);
-    });
-  });
-});
+}
