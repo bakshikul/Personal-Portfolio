@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function initTypingEffect() {
   const el = document.getElementById('typing-text');
   if (!el) return;
-  const roles = ['an AI/ML Engineer', 'a Machine Learning Enthusiast', 'a Web Developer', 'a Problem Solver'];
+  const roles = ['an AI/ML Engineer', 'a Web Developer', 'a Problem Solver'];
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (prefersReducedMotion) {
     el.textContent = roles[0];
