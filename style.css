@@ -114,14 +114,15 @@ textarea:focus-visible {
 }
 .nav {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 45%;
-  z-index: 100;
+  top: 20px;
+  left: 50%;
   height: 70px;
+  transform: translateX(-50%);
+  width: calc(100% - 2 * var(--gutter));
+  max-width: 700px;
+  z-index: 100;
   border-radius: 40px;
-  margin: 25px 0px 0px 440px;
+  margin: 0;
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 0.75);
@@ -386,6 +387,19 @@ textarea:focus-visible {
     border-color 0.3s ease,
     box-shadow 0.3s ease;
 }
+.skill1 i{
+  color: #3776AB;
+}
+.skill2 i{
+  color: #3776AB;
+}
+.skill3 i{
+  color: #3776AB;
+}
+.skill4 i {
+  color: #3776AB;
+}
+.skill
 .skill1::after,
 .skill2::after,
 .skill3::after,
@@ -543,6 +557,7 @@ textarea:focus-visible {
   background-clip: text;
   color: transparent;
   padding-left: 0.9rem;
+  font-style: italic;
   border-left: 3px solid var(--violet);
 }
 .exp-skill1 ul {
@@ -608,7 +623,7 @@ textarea:focus-visible {
   font-size: 3rem;
   font-weight: 700;
   font-style: italic;
-  margin-bottom: 0.6rem;
+  /* margin-bottom: 0.6rem; */
   letter-spacing: -0.02em;
   background: var(--gradient);
   -webkit-background-clip: text;
@@ -845,5 +860,38 @@ textarea:focus-visible {
   }
   .experience1::before {
     left: -1.85rem;
+  }
+}
+@media (max-width: 600px) {
+  .nav {
+    top: 12px;
+    width: calc(100% - 1.5rem);
+    border-radius: 30px;
+    height:100px;
+  }
+  .nav-container {
+    padding: 0.8rem 1.2rem;
+    justify-content: flex-start;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-links {
+    margin-top:4px;
+    gap:1.9rem;
+    flex-shrink: 0;
+  }
+  .nav-links a {
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+  .nav-res {
+    flex-shrink: 0;
+  }
+  .nav-res button {
+    padding: 0.5rem 1rem;
+    font-size: 0.82rem;
+    white-space: nowrap;
+    width: 300px;
   }
 }
