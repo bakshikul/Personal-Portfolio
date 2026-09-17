@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  initNavToggle();
   initTypingEffect();
   initNetworkCanvas();
   initActiveNav();
@@ -6,6 +7,43 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initCardSpotlight();
 });
+
+function initNavToggle() {
+  const nav = document.querySelector('.nav');
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  if (!nav || !toggle || !links) return;
+  const icon = toggle.querySelector('i');
+  function setOpen(open) {
+    nav.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    if (icon) {
+      icon.classList.toggle('fa-bars', !open);
+      icon.classList.toggle('fa-xmark', open);
+    }
+  }
+  toggle.addEventListener('click', e => {
+    e.stopPropagation();
+    setOpen(!nav.classList.contains('open'));
+  });
+  links.addEventListener('click', e => {
+    if (e.target.closest('a')) setOpen(false);
+  });
+  document.addEventListener('click', e => {
+    if (nav.classList.contains('open') && !nav.contains(e.target)) setOpen(false);
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && nav.classList.contains('open')) {
+      setOpen(false);
+      toggle.focus();
+    }
+  });
+  const desktop = window.matchMedia('(min-width: 861px)');
+  desktop.addEventListener('change', e => {
+    if (e.matches) setOpen(false);
+  });
+}
 
 function initTypingEffect() {
   const el = document.getElementById('typing-text');
