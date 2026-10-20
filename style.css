@@ -944,7 +944,7 @@ textarea:focus-visible {
 }
 @media (max-width: 900px) {
   #typing-text{
-    font-size: 1.4rem;
+    font-size: 1.1rem;
   }
   .about-conta {
     grid-template-columns: 1fr;
@@ -1283,6 +1283,7 @@ textarea:focus-visible {
   .certificate-list {
     padding:10px;
     display: flex;
+    margin : 0px;
     flex-direction: column;
   }
   .certificate {
