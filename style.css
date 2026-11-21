@@ -503,7 +503,7 @@ textarea {
 }
 .about-copy p {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.9;
 }
 .about-copy .lead {
@@ -518,7 +518,7 @@ textarea {
 }
 .about-links a,
 .text-link {
-  font-size: 12px;
+  font-size: 15px;
   color: var(--accent);
   font-weight: 700;
 }
@@ -545,12 +545,12 @@ textarea {
 .timeline-card h3,
 .project-content h3,
 .cert-content h3 {
-  font: 700 19px/1.4 var(--display);
+  font: 700 22px/1.4 var(--display);
   margin: 0;
 }
 .education-speciality {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 14px;
 }
 .education-meta {
   display: grid;
@@ -558,7 +558,7 @@ textarea {
   margin-top: 25px;
   padding-top: 20px;
   border-top: 1px solid var(--line);
-  font-size: 12px;
+  font-size: 16px;
   color: var(--text);
 }
 .education-meta span + span {
@@ -566,7 +566,7 @@ textarea {
 }
 .education-footer {
   color: var(--subtle);
-  font-size: 11px;
+  font-size: 13px;
   margin-top: 10px;
 }
 .skills-grid {
@@ -594,7 +594,7 @@ textarea {
   margin-bottom: 20px;
 }
 .skill-title h3 {
-  font: 700 15px var(--display);
+  font: 700 20px var(--display);
   margin: 0;
 }
 .skill-icon {
@@ -646,7 +646,7 @@ textarea {
   color: var(--accent);
 }
 .stat-card > span {
-  font-size: 12px;
+  font-size: 16px;
   color: var(--muted);
 }
 .stat-card > i {
@@ -686,12 +686,12 @@ textarea {
   margin-bottom: 12px;
 }
 .timeline-date {
-  font-size: 11px;
+  font-size: 13px;
   color: var(--subtle);
 }
 .company-name {
   color: var(--mint);
-  font-size: 12px;
+  font-size: 14px;
   margin: 4px 0;
 }
 .timeline-card > p:not(.company-name) {
